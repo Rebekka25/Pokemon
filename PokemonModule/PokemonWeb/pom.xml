@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>de.pokemon.PokemonModule</groupId>
+    <artifactId>PokemonModule</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>de.pokemon.PokemonWeb</groupId>
+  <artifactId>PokemonWeb</artifactId>
+  <packaging>war</packaging>
+ 
+   <properties>
+       <h2.version>1.4.187</h2.version>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+    	<groupId>de.pokemon.PokemonImpl</groupId>
+  		<artifactId>PokemonImpl</artifactId>
+   		<version>0.0.1-SNAPSHOT</version>
+   	</dependency>
+  	<dependency>
+    	<groupId>com.fasterxml.jackson.core</groupId>
+    	<artifactId>jackson-databind</artifactId>
+    	<version>2.10.0.pr3</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-entitymanager</artifactId>
+    	<version>5.2.3.Final</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>${h2.version}</version>
+    </dependency>
+  </dependencies>
+	
+  <build>
+    	<plugins>
+  		    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
+    </plugin>
+  	</plugins>
+    <finalName>PokemonWeb</finalName>
+  </build>
+</project>
